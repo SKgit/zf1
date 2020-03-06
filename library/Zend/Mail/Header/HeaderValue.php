@@ -92,7 +92,7 @@ final class Zend_Mail_Header_HeaderValue
         $tot = strlen($value);
         for ($i = 0; $i < $tot; $i += 1) {
             $ord = ord($value[$i]);
-            if (($ord < 32 || $ord > 126)
+            if (($ord < 32 || $ord > 255)
                 && $ord !== 13
             ) {
                 return false;
